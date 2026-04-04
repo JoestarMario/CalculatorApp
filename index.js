@@ -11,16 +11,38 @@ function addDisplayValue(value) {
 }
 
 function storeMemory(operator) {
-    numMemory = display.value;
-    if (operatorMemory) {
+    if (operatorMemory != null) {
         calculate();
     }
-    else{
-        display.value = "";
-    }
+    numMemory = Number(display.value);
     operatorMemory = operator;
+    display.value = "";
 }
 
 function calculate(){
-    
+    let displayNum = Number(display.value);
+    display.value = "";
+    switch (operatorMemory) {
+        case "+":
+            display.value = displayNum + numMemory;
+            break;
+        case "-":
+            display.value = numMemory - displayNum;
+            break;
+        case "*":
+            display.value = displayNum * numMemory;
+            break;
+        case "/":
+            display.value = numMemory / displayNum;
+            break;
+            
+    }
+    operatorMemory = null;
+    numMemory = 0;
+}
+
+function clearDisplay(){
+    display.value = "";
+    operatorMemory = null;
+    numMemory = 0;
 }

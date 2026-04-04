@@ -3,6 +3,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: hsl(0, 0%, 40%);
 }
 #Calculator{
     max-width: 500px;
@@ -21,13 +22,16 @@ body{
 }
 
 #Keys{
+    padding: 25px;
+}
+#Keys #grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    padding: 25px;
+    padding-bottom: 10px;
 }
 
-.CalcButton{
+#Keys button{
     width: 100px;
     height: 100px;
     border-radius: 25px;
@@ -37,7 +41,13 @@ body{
     font-weight: bold;
     font-size: 30px;
     cursor: pointer;
+    
 }
-.CalcButton:active{
+#Keys button:active{
     background-color: darkorange;
+}
+
+#Keys #Equals{
+    width: 100%;
+
 }

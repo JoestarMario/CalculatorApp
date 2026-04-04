@@ -9,22 +9,25 @@
         <div id="Calculator">
             <input id="Display" readonly>
             <div id="Keys">
-                <button class="CalcButton" onclick="addDisplayValue(7)">7</button>
-                <button class="CalcButton" onclick="addDisplayValue(8)">8</button>
-                <button class="CalcButton" onclick="addDisplayValue(9)">9</button>
-                <button class="CalcButton">&divide;</button>
-                <button class="CalcButton" onclick="addDisplayValue(4)">4</button>
-                <button class="CalcButton" onclick="addDisplayValue(5)">5</button>
-                <button class="CalcButton" onclick="addDisplayValue(6)">6</button>
-                <button class="CalcButton">&times;</button>
-                <button class="CalcButton" onclick="addDisplayValue(1)">1</button>
-                <button class="CalcButton" onclick="addDisplayValue(2)">2</button>
-                <button class="CalcButton" onclick="addDisplayValue(3)">3</button>
-                <button class="CalcButton">&minus;</button>
-                <button class="CalcButton" onclick="addDisplayValue(0)">0</button>
-                <button class="CalcButton" onclick="addDisplayValue('.')">.</button>
-                <button class="CalcButton">&equals;</button>
-                <button class="CalcButton">&plus;</button>
+                <div id="grid">
+                    <button onclick="addDisplayValue(7)">7</button>
+                    <button onclick="addDisplayValue(8)">8</button>
+                    <button onclick="addDisplayValue(9)">9</button>
+                    <button onclick="storeMemory('/')">&divide;</button>
+                    <button onclick="addDisplayValue(4)">4</button>
+                    <button onclick="addDisplayValue(5)">5</button>
+                    <button onclick="addDisplayValue(6)">6</button>
+                    <button onclick="storeMemory('*')">&times;</button>
+                    <button onclick="addDisplayValue(1)">1</button>
+                    <button onclick="addDisplayValue(2)">2</button>
+                    <button onclick="addDisplayValue(3)">3</button>
+                    <button onclick="storeMemory('-')">&minus;</button>
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="addDisplayValue(0)">0</button>
+                    <button onclick="addDisplayValue('.')">.</button>
+                    <button onclick="storeMemory('+')">&plus;</button>
+                </div>
+                <button id="Equals" onclick="calculate()">&equals;</button>
             </div>
 
         </div>
